@@ -1,26 +1,40 @@
 {
-  "name": "msv3-soap",
-  "version": "0.0.1",
-  "description": "Unofficial API wrapper for msv3",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "TS_NODE_PROJECT=test/tsconfig.json mocha"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexohneander/msv3-soap.git"
-  },
-  "keywords": [
-    "typescript",
-    "msv3",
-    "node",
-    "api",
-    "soap"
-  ],
-  "author": "Alex Wellnitz",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alexohneander/msv3-soap/issues"
-  },
-  "homepage": "https://github.com/alexohneander/msv3-soap#readme"
+    "name": "msv3-soap",
+    "version": "0.0.1",
+    "description": "Unofficial API wrapper for msv3",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "scripts": {
+        "build": "npm run clean && tsc && npm run copy-types",
+        "clean": "rm -rf lib",
+        "copy-types": "mkdir -p lib/types && node scripts/copy-types",
+        "test": "TS_NODE_PROJECT=test/tsconfig.json mocha",
+        "watch": "npm run clean && tsc -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alexohneander/msv3-soap.git"
+    },
+    "keywords": [
+        "typescript",
+        "msv3",
+        "node",
+        "api",
+        "soap"
+    ],
+    "author": "Alex Wellnitz",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/alexohneander/msv3-soap/issues"
+    },
+    "homepage": "https://github.com/alexohneander/msv3-soap#readme",
+    "devDependencies": {
+        "@types/mocha": "^10.0.0",
+        "@types/node": "^18.11.9",
+        "mocha": "^10.1.0",
+        "ts-node": "^10.9.1",
+        "tslint": "^5.20.1",
+        "tslint-config-airbnb": "^5.11.2",
+        "typescript": "^3.9.10"
+    }
 }
