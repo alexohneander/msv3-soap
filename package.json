@@ -1,0 +1,26 @@
+{
+  "name": "msv3-soap",
+  "version": "0.0.1",
+  "description": "Unofficial API wrapper for msv3",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "TS_NODE_PROJECT=test/tsconfig.json mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexohneander/msv3-soap.git"
+  },
+  "keywords": [
+    "typescript",
+    "msv3",
+    "node",
+    "api",
+    "soap"
+  ],
+  "author": "Alex Wellnitz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexohneander/msv3-soap/issues"
+  },
+  "homepage": "https://github.com/alexohneander/msv3-soap#readme"
+}
